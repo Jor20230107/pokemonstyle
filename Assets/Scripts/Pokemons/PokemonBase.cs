@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Pokemon", menuName = "Pokemon/Create new pokemon")]
@@ -101,4 +102,33 @@ public enum PokemonType{
     Rock,
     Ghost,
     Dragon
+}
+
+public class TypeChart{
+
+    static float[][] chart ={
+        //                  NOR FIR WAT ELE ICE GRS POI
+        /*NOR*/ new float[] {1f,1f,1f,1f,1f,1f,1f,1f,1f,1f,1f},
+        /*FIR*/ new float[] {1f,0.5f,0.5f,1f,2f,2f,1f,1f,1f,1f,1f},
+        /*WAT*/ new float[] {1f,2f,0.5f,2f,0.5f,1f,1f,1f,1f,1f,1f},
+        /*ELE*/ new float[] {1f,1f,2f,0.5f,0.5f,2f,1f,1f,1f,1f,1f},
+        /*ICE*/ new float[] {1f,1f,2f,0.5f,0.5f,2f,1f,1f,1f,1f,1f},
+        /*GRS*/ new float[] {1f,0.5f,2f,2f,0.5f,1f,1f,0.5f,1f,1f,1f},
+        /*POI*/ new float[] {1f,1f,1f,1f,2f,1f,1f,1f,1f,1f,1f},
+        /*POI*/ new float[] {1f,1f,1f,1f,2f,1f,1f,1f,1f,1f,1f},
+        /*POI*/ new float[] {1f,1f,1f,1f,2f,1f,1f,1f,1f,1f,1f},
+    };
+
+    public static float GetEffectiveness(PokemonType attackType, PokemonType defenceType){
+
+        if (attackType == PokemonType.None || defenceType == PokemonType.None){
+            return 1f;
+        }  
+
+        int row = (int)attackType -1;
+        int col = (int)defenceType -1;
+
+        return chart[row][col];
+
+    }
 }
