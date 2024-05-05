@@ -12,6 +12,18 @@ https://youtu.be/_Pm16a18zy8?si=qU_AQRTAsOyS_Uo1
 애초에 목적이 해당 강의를 다 따라한다(X) 게임개발할 때 UNITY와 C#에서 쓰는 기본적인 기능들을 이해한다(O) 였기 때문에,   
 현시점에서 잠시 STOP하고 여태까지 개발한 사항을 정리하면서 복기해본다.
 
+# UNITY C# SCRIPT
+## public class BattleSystem : MonoBehavior
+- unity에서 c# 스크립트를 생성하면 디폴트로 위 클래스가 생성이 된다.   
+- start와 update 메소드로 구성되며,
+- start는 해당 객체가 실행될때 실행되고, 이후 update는 frame단위로 실행된다.
+- - frame 단위보다 더 짧은단위로 실행하고싶다면?
+  - coroutine : Coroutines in Unity allow for executing code over several frames, which is useful for gradual movements or animations
+  - IEnumerator를 생성하고
+  - StartCoroutine으로 실행한다.
+- 저 :이 C#에서 상속을 의미하는 것인가? -> 찾아보니 맞네
+- MonoBehavior를 상속하지않고 일반 클래스로 작성해서 활용하는 것도 당연히 가능하다.
+- 
 
 
 
