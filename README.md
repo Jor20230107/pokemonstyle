@@ -1,4 +1,8 @@
 # pokemonstyle
+
+![pokemon](https://github.com/Jor20230107/pokemonstyle_20240427/assets/122156670/f70597bd-7e7e-44b5-8ee8-124727f49867)
+
+
 2024-05-05
 
 개인적인 관심으로 게임개발을 하고싶었다.   
